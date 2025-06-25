@@ -56,7 +56,8 @@
 
       <div class="header-social-links">
         <a href="https://x.com/valeria_tulesh" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.facebook.com/share/1Atytg8fho/?mibextid=wwXIfr" class="facebook"><i
+            class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="https://www.linkedin.com/in/pelin-nur-bi%C3%A7ici-b410a82b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
           class="linkedin"><i class="bi bi-linkedin"></i></a>
@@ -87,7 +88,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Turkey , Istanbul</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -95,7 +96,7 @@
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <p>+90 539 590 85 51</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -103,7 +104,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <p>pln2005ie.a@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -115,40 +116,40 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
+            <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200"> -->
+            <div class="row gy-4">
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
+              <div class="col-md-6">
+                <label for="name-field" class="pb-2">Your Name</label>
+                <input type="text" name="name" id="name-field" class="form-control" required="">
               </div>
-            </form>
+
+              <div class="col-md-6">
+                <label for="email-field" class="pb-2">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email-field" required="">
+              </div>
+
+              <div class="col-md-12">
+                <label for="subject-field" class="pb-2">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject-field" required="">
+              </div>
+
+              <div class="col-md-12">
+                <label for="message-field" class="pb-2">Message</label>
+                <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit" onclick="sendMessage()" id="send-message">Send Message</button>
+              </div>
+
+            </div>
+            <!-- </form> -->
           </div><!-- End Contact Form -->
 
         </div>
@@ -163,22 +164,17 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Valeria</strong> <span>All Rights Reserved<br></span>
+        <p>© <span id="copyright-part"></span><span> Copyright </span> <strong class="px-1 sitename">Valeria</strong>
+          <span>All Rights Reserved<br></span>
         </p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href="https://x.com/valeria_tulesh"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/share/1Atytg8fho/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
         <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-          href=“https://themewagon.com>ThemeWagon
+        <a
+          href="https://www.linkedin.com/in/pelin-nur-bi%C3%A7ici-b410a82b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i
+            class="bi bi-linkedin"></i></a>
       </div>
     </div>
 

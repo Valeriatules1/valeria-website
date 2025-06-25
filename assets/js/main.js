@@ -181,7 +181,7 @@
   console.log("first");
   document.getElementById("copyright-part").innerHTML = year;
   console.log('second');
-  
+
   if ((date.getMonth() + 1) - 10 > 0) {
     document.getElementById("valeria-age").innerHTML = year - 2005;
   } else if ((date.getMonth() + 1) - 10 === 0) {
