@@ -116,8 +116,7 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="./forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
+            <form class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -145,7 +144,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit" onclick="sendMessage()" id="send-message">Send Message</button>
+                  <button type="submit" id="send-message">Send Message</button>
                 </div>
 
               </div>
@@ -197,6 +196,53 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Add EmailJS SDK before your main.js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script>
+    (function () {
+      emailjs.init("Bp17N-tEV1rv0UlMa"); // Replace with your EmailJS public key
+    })();
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".php-email-form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Show loading
+        form.querySelector('.loading').style.display = 'block';
+        form.querySelector('.error-message').style.display = 'none';
+        form.querySelector('.sent-message').style.display = 'none';
+
+        // Collect form data
+        const subject = form.querySelector('[name="subject"]').value;
+        const message = form.querySelector('[name="message"]').value;
+        const name = form.querySelector('[name="name"]').value;
+        const email = form.querySelector('[name="email"]').value;
+
+        // Prepare template params
+        const templateParams = {
+          subject: subject,
+          message: message,
+          name: name,
+          email: email
+        };
+        emailjs.send('service_kpa4t38', 'template_w5l1s42', templateParams)
+          .then(function () {
+            form.querySelector('.loading').style.display = 'none';
+            form.querySelector('.sent-message').style.display = 'block';
+            form.reset();
+          }, function (error) {
+            form.querySelector('.loading').style.display = 'none';
+            form.querySelector('.error-message').style.display = 'block';
+            form.querySelector('.error-message').innerText = 'Failed to send message. Please try again!';
+          });
+      });
+    });
+  </script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
