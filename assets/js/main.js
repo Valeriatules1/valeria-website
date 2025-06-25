@@ -175,24 +175,28 @@
 
   });
 
-})();
+  const date = new Date();
+  const year = date.getFullYear();
 
-
-const date = new Date();
-const year = date.getFullYear();
-
-if ((date.getMonth() + 1) - 10 > 0) {
-  document.getElementById("valeria-age").innerHTML = year - 2005;
-} else if ((date.getMonth() + 1) - 10 === 0) {
-  if (date.getDate() - 25 > 0) {
+  console.log("first");
+  document.getElementById("copyright-part").innerHTML = year;
+  console.log('second');
+  
+  if ((date.getMonth() + 1) - 10 > 0) {
     document.getElementById("valeria-age").innerHTML = year - 2005;
-  } else if (date.getDate() - 25 === 0) {
-    document.getElementById("valeria-age").innerHTML = year - 2005;
+  } else if ((date.getMonth() + 1) - 10 === 0) {
+    if (date.getDate() - 25 > 0) {
+      document.getElementById("valeria-age").innerHTML = year - 2005;
+    } else if (date.getDate() - 25 === 0) {
+      document.getElementById("valeria-age").innerHTML = year - 2005;
+    } else {
+      document.getElementById("valeria-age").innerHTML = year - 2005 - 1;
+    }
   } else {
     document.getElementById("valeria-age").innerHTML = year - 2005 - 1;
   }
-} else {
-  document.getElementById("valeria-age").innerHTML = year - 2005 - 1;
-}
 
-document.getElementById("copyright-part").innerHTML = `©${year} <span>Copyright </span> <strong class="px-1 sitename">Valeria</strong> <span>All Rights Reserved<br></span>`;
+})();
+
+
+
